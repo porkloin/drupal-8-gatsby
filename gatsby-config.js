@@ -12,6 +12,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-source-drupal',
+      options: {
+        baseUrl: 'http://yourdomain.yoursite.com/',
+        apiBase: 'jsonapi', // this may be different if you're using an API-first distribution like Contenta.
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
