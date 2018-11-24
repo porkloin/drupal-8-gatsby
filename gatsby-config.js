@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Drupal + Gatsby = A JAMStack Love Story',
+    slogan: 'a match made in heaven',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
