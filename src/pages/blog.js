@@ -9,6 +9,7 @@ const BlogPage = ( { data } ) => (
     <h1>Blog</h1>
     {data.allNodeArticle.edges.map((post) => (
       <BlogTeaser
+        slug={post.node.fields.slug}
         key={post.node.id}
         title={post.node.title}
         summary={post.node.body.summary.length > 0 ? post.node.body.summary : post.node.body.processed.substring(0, 300)}
@@ -22,6 +23,9 @@ export const query = graphql`
     allNodeArticle {
       edges {
         node {
+          fields {
+            slug
+          }
           id
           title
           body {
